@@ -125,7 +125,6 @@ function unpack() {
 
     echo "- Checking MD5"
     pushd "$( dirname "${1}" )"
-    md5sum "${1}" > "${1}.md5"
     md5sum --check "${1}.md5"
     if [ $? -ne 0 ]; then
         echo "Invalid file signature!"
